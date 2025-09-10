@@ -1,4 +1,4 @@
-# 🧠 ML Pipeline: From Raw Data to Explainable Predictions
+# 🧠 ML Pipeline: from raw data to explainable predictions
 
 This repository showcases a complete machine learning workflow, from data ingestion and cleaning to model selection, hyperparameter tuning, and explainability. The project emphasizes best practices in preprocessing, model evaluation, and interpretability using modern tools like SHAP and Optuna.
 
