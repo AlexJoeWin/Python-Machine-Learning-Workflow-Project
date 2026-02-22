@@ -7,16 +7,22 @@ This repository showcases a complete machine learning workflow, from data ingest
 ### 1. Data Inspection & Cleaning
 - Renamed headers for clarity
 - Verified and corrected data types
-- Converted `"?"` strings to `NaN` and imputed missing values
-- Identified rows with multiple `"?"` entries using a custom algorithm
-- Corrected suspected typos in categorical features
-- Checked for duplicates and high correlation among numeric features
+- Converted `"?"` strings to `NaN` for numeric feature
+- Split data into a numeric and string partition for better handling
+- Determined unique categorical values and corrected typos
+- Identified fraction of `"?"` in each feature, as well as rows with multiple `"?"` entries
+- Converted `"?"` strings to `NaN` for all feature
+- Statistics on numeric features
+- Checked for high correlation among numeric features
+- Checked for duplicate rows
+- Transformed string features into categories
+- Checked class balance
 
 ### 2. Preprocessing
+- Split into training and test sets
 - **Target variable**: Label Encoding
 - **Categorical features**: One-Hot Encoding + Mode Imputation
 - **Numerical features**: Power Transformation + Mean Imputation
-- Split into training and test sets
 
 ### 3. Modeling
 - Models used:
@@ -30,12 +36,10 @@ This repository showcases a complete machine learning workflow, from data ingest
 
 ### 4. Feature Importance & Explainability
 - `.feature_importances_` and Permutation Importance
-- SHAP values for interpretability
 - Synergy analysis between top features across methods
+- SHAP values for interpretability
 
 ### 5. Dimensionality Reduction
 - PCA applied to reduce dimensionality while retaining 90% variance
-- Re-trained models on reduced feature space
 - Visual inspection of explained variance
-
-
+- Re-trained models on reduced feature space
